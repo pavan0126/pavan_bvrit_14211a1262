@@ -14,7 +14,7 @@ import java.util.Date;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	
+	private Student[] studentstemp;
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -26,68 +26,180 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return null;
+		return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return null;
+		if(index<0 || index>students.length) {
+			throw new IllegalArgumentException();
+		}
+		
+		return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		if(index<0 || index>students.length || students ==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			students[index]=student;
+		}
 	}
 
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		if(student==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			studentstemp[0]=student;
+			for(int i=0;i<students.length;i++) {
+				studentstemp[i+1]=students[i];
+			}
+			students=studentstemp;
+		}
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		if(student==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+			for(int i=0;i<students.length;i++) {
+				studentstemp[i]=students[i];
+			}
+			studentstemp[students.length]=student;
+			students=studentstemp;
+		}
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		if(student==null || index<0 || index > students.length) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+		}
 	}
 
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		if(index<0 || index > students.length) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+		}
 	}
 
 	@Override
 	public void remove(Student student) {
 		// Add your implementation here
+		if(student==null) {
+			throw new IllegalArgumentException();
+		}
+		
+		else {
+			int flag =0;
+			int index=0;
+			for(int i=0;i<students.length;i++) {
+				if(students[i]==student) {
+					flag=1;
+					index=i;
+					break;
+				}
+			}
+			if(flag==0) {
+				System.out.println("Student not exist");
+				throw new IllegalArgumentException();
+			}
+			else {
+				for(int i=index;i<students.length-1;i++) {
+					students[i]=students[i+1];
+				}
+				
+			} 
+		}
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		if(index<0 || index>students.length) {
+			throw new IllegalArgumentException();
+		}
+		
+		else {
+		/*	int flag =0;
+			int index1=0;
+			for(int i=0;i<students.length;i++) {
+				if(students[i]==student) {
+					flag=1;
+					index1=i;
+					break;
+				}
+			}
+			if(flag==0) {
+				System.out.println("Student not exist");
+				throw new IllegalArgumentException();
+			}
+			else {
+				for(int i=index1;i<students.length-1;i++) {
+					students[i]=students[i+1];
+				}
+				
+			}*/
+		}
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		if(student==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+		}
 	}
 
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
+		if(index<0 || index>students.length) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+		}
 	}
 
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+		if(student==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+		}
 	}
 
 	@Override
@@ -98,6 +210,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
+		if(date==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			
+		}
 		return null;
 	}
 
