@@ -110,7 +110,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		
 		else {
-			int flag =0;
+		/*	int flag =0;
 			int index=0;
 			for(int i=0;i<students.length;i++) {
 				if(students[i]==student) {
@@ -128,7 +128,7 @@ public class StudentGroup implements StudentArrayOperation {
 					students[i]=students[i+1];
 				}
 				
-			}
+			} */
 		}
 	}
 
@@ -140,7 +140,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		
 		else {
-			int flag =0;
+			/*int flag =0;
 			int index1=0;
 			for(int i=0;i<students.length;i++) {
 				if(students[i]==student) {
@@ -158,7 +158,7 @@ public class StudentGroup implements StudentArrayOperation {
 					students[i]=students[i+1];
 				}
 				
-			}
+			}*/
 		}
 	}
 
