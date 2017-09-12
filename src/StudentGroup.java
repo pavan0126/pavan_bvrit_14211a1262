@@ -41,10 +41,8 @@ public class StudentGroup implements StudentArrayOperation {
 		if(index<0 || index>students.length || students ==null) {
 			throw new IllegalArgumentException();
 		}
-		else {
-			
-		}
-		return null;
+		
+		return students[index];
 	}
 
 	@Override
@@ -54,7 +52,7 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		}
 		else {
-			students[i]=student;
+			students[index]=student;
 		}
 	}
 
