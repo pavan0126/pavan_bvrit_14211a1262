@@ -54,7 +54,7 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		}
 		else {
-			
+			students[i]=student;
 		}
 	}
 
@@ -85,14 +85,14 @@ public class StudentGroup implements StudentArrayOperation {
 				studentstemp[i]=students[i];
 			}
 			studentstemp[students.length]=student;
-			students=studentstemp
+			students=studentstemp;
 		}
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
-		if(student==null) {
+		if(student==null || index<0 || index > students.length) {
 			throw new IllegalArgumentException();
 		}
 		else {
