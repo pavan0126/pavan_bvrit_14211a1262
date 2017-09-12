@@ -14,7 +14,7 @@ import java.util.Date;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	private Student[] studentstemp;
+	//private Student[] studentstemp;
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -26,7 +26,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return null;
+		return students;
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		if(index<0 || index>students.length || students ==null) {
+		if(index<0 || index>students.length) {
 			throw new IllegalArgumentException();
 		}
 		
