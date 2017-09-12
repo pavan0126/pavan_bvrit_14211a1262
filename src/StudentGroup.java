@@ -85,7 +85,7 @@ public class StudentGroup implements StudentArrayOperation {
 				studentstemp[i]=students[i];
 			}
 			studentstemp[students.length]=student;
-			students=studentstemp;
+			students=studentstemp
 		}
 	}
 
