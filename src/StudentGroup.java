@@ -14,7 +14,7 @@ import java.util.Date;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	
+	private Student[] studentstemp;
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -65,7 +65,11 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		}
 		else {
-			
+			studentstemp[0]=student;
+			for(int i=0;i<students.length;i++) {
+				studentstemp[i+1]=students[i];
+			}
+			students=studentstemp;
 		}
 	}
 
@@ -77,6 +81,11 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		else {
 			
+			for(int i=0;i<students.length;i++) {
+				studentstemp[i]=students[i];
+			}
+			studentstemp[students.length]=student;
+			students=studentstemp;
 		}
 	}
 
